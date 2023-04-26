@@ -1,0 +1,19 @@
+CREATE DATABASE dating_bot;
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    vk_id INT NOT NULL,
+    name VARCHAR(100),
+    age INT,
+    sex CHAR(1),
+    interests TEXT[]
+);
+
+CREATE TABLE preferences (
+    id SERIAL PRIMARY KEY,
+    user_id INT,
+    sex CHAR(1),
+    age_from INT,
+    age_to INT,
+    interests TEXT[]
+);
